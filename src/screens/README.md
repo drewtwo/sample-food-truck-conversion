@@ -1,54 +1,34 @@
-# Screens
+# Screens Directory
 
-This directory contains all screen components for the Food Truck application.
+This directory contains all screen components for the React Native application.
 
 ## Structure
 
-Each screen should be a self-contained component that represents a full page or major view in the application.
+Each screen should be a self-contained component that represents a full-screen view in the application.
 
-### Naming Conventions
+### Naming Convention
 
 - Screen files should be named in PascalCase (e.g., `HomeScreen.tsx`, `MenuScreen.tsx`)
 - Each screen should export a default component
-- Screen components should be functional components using React hooks
 
-### File Organization
+### Example Structure
 
 ```
-screens/
+src/screens/
 ├── HomeScreen.tsx
 ├── MenuScreen.tsx
 ├── OrderScreen.tsx
-├── ProfileScreen.tsx
-└── [other screens]
+└── ProfileScreen.tsx
 ```
 
 ## Best Practices
 
-1. **Keep screens focused**: Each screen should handle one primary view/feature
-2. **Use composition**: Break down complex screens into smaller components from `src/components/`
-3. **Navigation props**: Screens receive navigation props from React Navigation
-4. **State management**: Use Redux/store for global state, local state for UI-specific state
-5. **Type safety**: Always define proper TypeScript types for props and state
+1. **Keep screens focused**: Each screen should handle one primary user flow
+2. **Use navigation props**: Leverage React Navigation's `useNavigation` hook for navigation
+3. **Extract complex logic**: Move complex business logic to custom hooks or store
+4. **Reuse components**: Import and use components from `src/components/`
+5. **Type safety**: Always use TypeScript interfaces for props and state
 
-## Example Screen Structure
+## Integration
 
-```typescript
-import React from 'react';
-import { View, Text } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-
-type HomeScreenProps = {
-  navigation: StackNavigationProp<any, 'Home'>;
-};
-
-export const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
-  return (
-    <View>
-      <Text>Home Screen</Text>
-    </View>
-  );
-};
-
-export default HomeScreen;
-```
+Screens are typically registered in the navigation stack defined in `src/navigation/`.

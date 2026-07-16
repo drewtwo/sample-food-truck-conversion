@@ -1,88 +1,67 @@
-# Components
+# Components Directory
 
-This directory contains reusable UI components for the Food Truck application.
+This directory contains reusable UI components for the React Native application.
 
 ## Structure
 
-Components are organized by functionality and can be used across multiple screens.
+Components should be modular, reusable, and focused on a single responsibility.
 
-### Naming Conventions
+### Naming Convention
 
-- Component files should be named in PascalCase (e.g., `Button.tsx`, `MenuCard.tsx`)
+- Component files should be named in PascalCase (e.g., `Button.tsx`, `Card.tsx`, `Header.tsx`)
 - Each component should export a default component
-- Components should be functional components using React hooks
-- Create a `types.ts` file in subdirectories for component-specific types
+- Related components can be grouped in subdirectories
 
-### File Organization
+### Example Structure
 
 ```
-components/
-├── common/
-│   ├── Button.tsx
-│   ├── Card.tsx
-│   ├── Header.tsx
-│   └── types.ts
-├── menu/
-│   ├── MenuCard.tsx
-│   ├── MenuList.tsx
-│   └── types.ts
-├── order/
-│   ├── OrderItem.tsx
-│   ├── OrderSummary.tsx
-│   └── types.ts
-└── [other component groups]
+src/components/
+├── Button.tsx
+├── Card.tsx
+├── Header.tsx
+├── MenuItem.tsx
+├── OrderItem.tsx
+└── common/
+    ├── Loader.tsx
+    └── ErrorBoundary.tsx
 ```
 
 ## Best Practices
 
-1. **Single Responsibility**: Each component should have one primary purpose
-2. **Reusability**: Design components to be flexible and reusable across the app
-3. **Props Interface**: Define clear TypeScript interfaces for component props
-4. **Styling**: Use consistent styling approach (StyleSheet, styled-components, etc.)
-5. **Documentation**: Add JSDoc comments for complex components
-6. **Testing**: Components should be easy to test in isolation
+1. **Single Responsibility**: Each component should do one thing well
+2. **Props Interface**: Define a TypeScript interface for all props
+3. **Composition**: Build complex UIs by composing smaller components
+4. **Styling**: Use StyleSheet from React Native for consistent styling
+5. **Accessibility**: Include accessibility props (testID, accessibilityLabel, etc.)
+6. **Documentation**: Add JSDoc comments for complex components
 
-## Component Categories
-
-### Common Components
-Basic UI elements used throughout the app (buttons, cards, headers, etc.)
-
-### Feature-Specific Components
-Components grouped by feature (menu, order, payment, etc.)
-
-## Example Component Structure
+## Component Template
 
 ```typescript
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-interface ButtonProps {
-  title: string;
-  onPress: () => void;
-  disabled?: boolean;
+interface MyComponentProps {
+  // Define props here
 }
 
-/**
- * A reusable button component
- */
-export const Button: React.FC<ButtonProps> = ({ title, onPress, disabled }) => {
+const MyComponent: React.FC<MyComponentProps> = (props) => {
   return (
-    <View style={[styles.button, disabled && styles.disabled]}>
-      <Text onPress={onPress}>{title}</Text>
+    <View style={styles.container}>
+      {/* Component content */}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  button: {
-    padding: 12,
-    backgroundColor: '#007AFF',
-    borderRadius: 8,
-  },
-  disabled: {
-    opacity: 0.5,
+  container: {
+    flex: 1,
   },
 });
 
-export default Button;
+export default MyComponent;
 ```
+
+## Integration
+
+Components are imported and used in screens and other components throughout the application.
