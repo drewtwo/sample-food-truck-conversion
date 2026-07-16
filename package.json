@@ -1,0 +1,61 @@
+{
+  "name": "food-truck-rn",
+  "version": "0.1.0",
+  "description": "Food Truck React Native Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json}\"",
+    "type-check": "tsc --noEmit",
+    "build": "expo build",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.0",
+    "@react-navigation/drawer": "^6.6.0",
+    "@react-navigation/native": "^6.1.0",
+    "@react-navigation/native-stack": "^6.9.0",
+    "expo": "^50.0.0",
+    "expo-constants": "^15.4.0",
+    "expo-status-bar": "^1.11.1",
+    "react": "^18.2.0",
+    "react-native": "^0.73.0",
+    "react-native-gesture-handler": "^2.14.0",
+    "react-native-reanimated": "^3.5.0",
+    "react-native-safe-area-context": "^4.7.0",
+    "react-native-screens": "^3.27.0",
+    "react-native-web": "^0.19.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.4.0",
+    "@types/jest": "^29.5.0",
+    "@types/react": "^18.2.0",
+    "@types/react-native": "^0.73.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-native": "^4.1.0",
+    "husky": "^8.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

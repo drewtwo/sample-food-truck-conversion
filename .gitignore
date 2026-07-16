@@ -1,21 +1,58 @@
-# See LICENSE folder for this sample’s licensing information.
-#
-# Apple sample code gitignore configuration.
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
 
-# Finder
+# Testing
+/coverage
+/.nyc_output
+
+# Production
+/build
+/dist
+/.expo
+/.expo-shared
+
+# Misc
 .DS_Store
+*.pem
+.env
+.env.local
+.env.*.local
 
-# Xcode - User files
-xcuserdata/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-**/*.xcodeproj/project.xcworkspace/*
-!**/*.xcodeproj/project.xcworkspace/xcshareddata
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-**/*.xcodeproj/project.xcworkspace/xcshareddata/*
-!**/*.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+# OS
+Thumbs.db
 
-**/*.playground/playground.xcworkspace/*
-!**/*.playground/playground.xcworkspace/xcshareddata
+# React Native
+.gradle
+.m2
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
 
-**/*.playground/playground.xcworkspace/xcshareddata/*
-!**/*.playground/playground.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+# Expo
+.expo-shared/
+dist/
