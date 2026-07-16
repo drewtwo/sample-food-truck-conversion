@@ -1,7 +1,8 @@
 module.exports = function (api) {
   api.cache(true);
+  const isTest = api.env('test');
   return {
-    presets: ['babel-preset-expo'],
+    presets: [isTest ? ['@babel/preset-env', { targets: { node: 'current' } }] : 'babel-preset-expo', '@babel/preset-typescript', '@babel/preset-react'],
     plugins: [
       [
         'module-resolver',
