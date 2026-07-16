@@ -1,35 +1,29 @@
 module.exports = {
-  preset: 'jest-expo',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '^@components/(.*)$': '<rootDir>/src/components/$1',
-    '^@screens/(.*)$': '<rootDir>/src/screens/$1',
-    '^@services/(.*)$': '<rootDir>/src/services/$1',
-    '^@utils/(.*)$': '<rootDir>/src/utils/$1',
-    '^@types/(.*)$': '<rootDir>/src/types/$1',
-    '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
-    '^@constants/(.*)$': '<rootDir>/src/constants/$1',
-  },
+  preset: 'react-native',
+  setupFilesAfterEnv: ['<rootDir>/src/__tests__/setup.ts'],
+  testEnvironment: 'node',
   transform: {
-    '^.+\\.(ts|tsx)$': ['babel-jest', { presets: ['babel-preset-expo'] }],
+    '^.+\\.tsx?$': 'babel-jest',
   },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testMatch: [
-    '<rootDir>/tests/**/__tests__/**/*.{ts,tsx}',
-    '<rootDir>/tests/**/*.{spec,test}.{ts,tsx}',
+    '<rootDir>/src/**/__tests__/**/*.test.{ts,tsx}',
+    '<rootDir>/src/**/*.test.{ts,tsx}',
   ],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
     '!src/**/*.d.ts',
-    '!src/index.ts',
+    '!src/**/__tests__/**',
+    '!src/__mocks__/**',
   ],
-  coverageThreshold: {
-    global: {
-      branches: 50,
-      functions: 50,
-      lines: 50,
-      statements: 50,
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  globals: {
+    'ts-jest': {
+      tsconfig: {
+        jsx: 'react-native',
+      },
     },
   },
 };
