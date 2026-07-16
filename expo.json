@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "food-truck-rn",
+    "slug": "food-truck-rn",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.foodtruck.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.foodtruck.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with others.",
+          "cameraPermission": "The app uses your camera to take photos."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "food-truck-rn"
+      }
+    }
+  }
+}
