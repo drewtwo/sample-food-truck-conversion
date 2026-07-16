@@ -10,15 +10,70 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  # UI & Material Design
   cupertino_icons: ^1.0.2
+  
+  # State Management
+  # Provider: Lightweight, flexible state management and dependency injection.
+  # Chosen for its simplicity, excellent documentation, and strong community support.
+  # Supports ChangeNotifier, StateNotifier, and FutureProvider patterns.
   provider: ^6.0.0
+  
+  # Navigation & Routing
+  # GoRouter: Modern, declarative routing with deep linking support.
+  # Provides type-safe navigation and automatic URL parsing.
+  # Replaces Navigator 1.0 with a more maintainable approach.
+  go_router: ^13.0.0
+  
+  # Data Models & Serialization
+  # Freezed: Code generator for immutable data classes with pattern matching.
+  # Ensures type safety and reduces boilerplate for model definitions.
+  freezed_annotation: ^2.4.0
+  
+  # API Communication
+  # http: Lightweight HTTP client for REST API calls.
+  # Provides a simple, composable API for making HTTP requests.
   http: ^1.1.0
+  
+  # Local Storage & Persistence
+  # SharedPreferences: Simple key-value storage for local data persistence.
+  # Used for caching user preferences, authentication tokens, and app state.
+  shared_preferences: ^2.2.0
+  
+  # Localization & Internationalization
+  # intl: Provides message formatting, date/time formatting, and pluralization.
+  # Enables multi-language support with locale-aware formatting.
   intl: ^0.19.0
+  
+  # Data Visualization
+  # fl_chart: Comprehensive charting library for Flutter.
+  # Supports line charts, bar charts, pie charts, and more.
+  # Used for displaying sales analytics and truck performance metrics.
+  fl_chart: ^0.65.0
+  
+  # Platform Channels (iOS-specific)
+  # swift_protobuf: Protocol Buffers support for Swift/iOS platform channels.
+  # Enables efficient serialization for native iOS communication.
+  # Used for passing complex data structures between Dart and native Swift code.
+  swift_protobuf: ^1.26.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  # Linting & Code Quality
   flutter_lints: ^2.0.0
+  
+  # Code Generation
+  # build_runner: Runs code generators for freezed, json_serializable, etc.
+  # Required for generating model classes and serialization code.
+  build_runner: ^2.4.0
+  
+  # Freezed Code Generator
+  # freezed: Generates immutable data classes with copyWith, equality, and toString.
+  # Reduces boilerplate and ensures consistency in model definitions.
+  freezed: ^2.4.0
 
 flutter:
   uses-material-design: true
