@@ -1,3 +1,3 @@
-// Utils index - export all utility functions here
-// Example: export { formatPrice } from './formatters';
-// Example: export { validateEmail } from './validators';
+// Utils - export all utilities and hooks from this index
+// Example: export { formatDate, formatCurrency } from './formatters';
+// Example: export { useAsync, useFetch } from './hooks';

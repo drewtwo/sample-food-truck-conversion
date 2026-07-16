@@ -1,2 +1,2 @@
-// Navigation index - export navigation configuration here
-// Example: export { RootNavigator } from './RootNavigator';
+// Navigation - export navigation configuration from this index
+// Example: export { default as RootNavigator } from './RootNavigator';

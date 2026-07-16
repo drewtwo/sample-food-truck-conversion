@@ -1,3 +1,3 @@
-// API index - export API client and services here
-// Example: export { apiClient } from './client';
-// Example: export { menuService } from './services/menuService';
+// API - export API services from this index
+// Example: export { authService } from './authService';
+// Example: export { menuService } from './menuService';

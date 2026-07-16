@@ -1,2 +1,2 @@
-// Components index - export all reusable components here
-// Example: export { default as Button } from './common/Button';
+// Components - export all components from this index
+// Example: export { default as Button } from './Button';
