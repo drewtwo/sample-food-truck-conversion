@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS has decided
+         to display the app. This theme determines the color of the background, the status bar
+         color, and the color of faded widgets in the system navigation bar. If you want to
+         change the appearance of the Flutter app, follow the guidance in the Flutter design
+         documentation: https://flutter.dev/design -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             Flutter draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the background, the status bar color, and the color of
+         faded widgets in the system navigation bar. If you want to change the appearance of the
+         Flutter app, follow the guidance in the Flutter design documentation:
+         https://flutter.dev/design -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
