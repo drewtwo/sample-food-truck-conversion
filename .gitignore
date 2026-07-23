@@ -1,4 +1,4 @@
-# See LICENSE folder for this sample’s licensing information.
+# See LICENSE folder for this sample's licensing information.
 #
 # Apple sample code gitignore configuration.
 
@@ -19,3 +19,147 @@ xcuserdata/
 
 **/*.playground/playground.xcworkspace/xcshareddata/*
 !**/*.playground/playground.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+
+# Flutter-specific
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+flutter_*.png
+generated_plugin_registrant.dart
+
+# iOS/macOS
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/Podfile.lock
+ios/.symlinks/
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+
+# Android
+android/.gradle
+android/gradle
+android/.gradle/
+android/local.properties
+android/app/debug
+android/app/profile
+android/app/release
+android/app/outputs/
+android/.idea/
+
+# Web
+web/
+.web/
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.rts2_cache_/
+.rts2_cache_cjs/
+.rts2_cache_esm/
+.rts2_cache_umd/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be committed to version control.
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# iOS/macOS
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*sync/
+**/ios/**/.sconsign.dblite
+**/ios/**/.tags*
+**/ios/**/.vagrant/
+**/ios/**/DerivedData/
+**/ios/**/Icon?
+**/ios/**/Pods/
+**/ios/**/.symlinks/
+**/ios/**/Flutter/Flutter.framework
+**/ios/**/Flutter/Flutter.podspec
+**/ios/**/Flutter/Flutter.xcframework
+**/ios/**/Flutter/flutter_export_environment.sh
+**/ios/**/Flutter/flutter_export_environment.sh.bak
+**/ios/**/Flutter/.last_build_id
+**/ios/**/.dart_tool/
+**/ios/**/.flutter-plugins
+**/ios/**/.flutter-plugins-dependencies
+**/ios/**/.packages
+**/ios/**/.pub-cache/
+**/ios/**/.pub/
+**/ios/**/build/
+**/ios/**/Flutter/ephemeral/
+**/ios/**/Flutter/ephemeral/.dart_tool/
+**/ios/**/Flutter/ephemeral/.flutter-plugins
+**/ios/**/Flutter/ephemeral/.flutter-plugins-dependencies
+**/ios/**/Flutter/ephemeral/.packages
+**/ios/**/Flutter/ephemeral/.pub-cache/
+**/ios/**/Flutter/ephemeral/.pub/
+**/ios/**/Flutter/ephemeral/build/
+
+# Android
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/android/key.properties
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/gradle-wrapper.jar
+**/android/gradle-wrapper.properties
+**/android/.idea/
+**/android/.classpath
+**/android/.project
+**/android/.settings/
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/android/**/gradle-wrapper.jar
+**/android/**/gradlew
+**/android/**/gradlew.bat
+**/android/**/local.properties
+**/android/**/.gradle/
+**/android/**/captures/
+**/android/**/.idea/
+**/android/**/.classpath
+**/android/**/.project
+**/android/**/.settings/
+**/android/**/proguard/
+
+# Coverage
+coverage/
+
+# Exceptions to above rules.
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+!/dev/ci/**/packages/**/.packages
