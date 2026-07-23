@@ -1,0 +1,19 @@
+// This is a generated file; do not edit or check into version control.
+DART_OBFUSCATION=false
+ENABLE_BITCODE=false
+FLUTTER_APPLICATION_PATH=/path/to/flutter/app
+FLUTTER_BUILD_DIR=build
+FLUTTER_BUILD_NAME=1.0.0
+FLUTTER_BUILD_NUMBER=1
+FLUTTER_DART_DEFINES=flutter.inspector.structuredErrors%3Dtrue
+FLUTTER_FRAMEWORK_DIR=/path/to/flutter/bin/cache/artifacts/engine/ios
+FLUTTER_FRAMEWORK_DIR_PROFILE=/path/to/flutter/bin/cache/artifacts/engine/ios-profile
+FLUTTER_FRAMEWORK_DIR_RELEASE=/path/to/flutter/bin/cache/artifacts/engine/ios-release
+FLUTTER_PATCH_ANDROID_GRADLE_PLUGIN=false
+FLUTTER_PREBUILT_DART_SDK=false
+FLUTTER_ROOT=/path/to/flutter
+FLUTTER_SUPPRESS_ANALYTICS=false
+FLUTTER_TARGET=/path/to/flutter/app/lib/main.dart
+FLUTTER_TARGET_PLATFORM=ios
+FLUTTER_WEB_AUTO_DETECT=true
+MINSDK_IPHONEOS=16.4
