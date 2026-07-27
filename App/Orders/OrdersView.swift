@@ -70,6 +70,10 @@ struct OrdersView: View {
     
     var list: some View {
         List {
+            Section {
+                OrderCompletionTimeView(analytics: model.orderAnalytics)
+            }
+
             if let orders = orderSections[.placed] {
                 Section("New") {
                     orderRows(orders)

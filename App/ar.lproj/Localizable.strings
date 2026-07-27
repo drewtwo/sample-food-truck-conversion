@@ -446,6 +446,24 @@ A localization file.
 /* A label indicating the order status. */
 "Status" = "الحالة";
 
+/* Completion time analytics section title. */
+"Completion Time Analytics" = "تحليلات وقت الإنجاز";
+
+/* Label for the average completion time stat. */
+"Average" = "المتوسط";
+
+/* Label for the median completion time stat. */
+"Median" = "الوسيط";
+
+/* Label for the fastest (minimum) completion time stat. */
+"Fastest" = "الأسرع";
+
+/* Label for the slowest (maximum) completion time stat. */
+"Slowest" = "الأبطأ";
+
+/* Label shown in the order detail view for the time taken to complete an order. */
+"Completion Time" = "وقت الإنجاز";
+
 /* Button title. */
 "Subscribe" = "الاشتراك";
 
