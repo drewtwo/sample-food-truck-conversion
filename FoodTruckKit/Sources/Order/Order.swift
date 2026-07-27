@@ -1,5 +1,5 @@
 /*
-See the LICENSE.txt file for this sample’s licensing information.
+See the LICENSE.txt file for this sample's licensing information.
 
 Abstract:
 The order model.
@@ -24,6 +24,7 @@ public struct Order: Identifiable, Equatable {
     // metadata
     public var creationDate: Date
     public var completionDate: Date?
+    public var completedAt: Date?
     public var temperature: Measurement<UnitTemperature>
     public var wasRaining: Bool
     
@@ -38,7 +39,8 @@ public struct Order: Identifiable, Equatable {
         creationDate: Date,
         completionDate: Date?,
         temperature: Measurement<UnitTemperature>,
-        wasRaining: Bool
+        wasRaining: Bool,
+        completedAt: Date? = nil
     ) {
         self.id = id
         self.status = status
@@ -51,6 +53,7 @@ public struct Order: Identifiable, Equatable {
         self.completionDate = completionDate
         self.temperature = temperature
         self.wasRaining = wasRaining
+        self.completedAt = completedAt
     }
     
     public var duration: TimeInterval? {
@@ -58,6 +61,14 @@ public struct Order: Identifiable, Equatable {
             return nil
         }
         return completionDate.timeIntervalSince(creationDate)
+    }
+    
+    /// The number of minutes from order creation to completion, if the order has been completed.
+    public var completionDurationInMinutes: Double? {
+        guard let completedAt = completedAt else {
+            return nil
+        }
+        return completedAt.timeIntervalSince(creationDate) / 60.0
     }
     
     public var totalSales: Int {
@@ -69,6 +80,7 @@ public struct Order: Identifiable, Equatable {
             return
         }
         self.completionDate = .now
+        self.completedAt = .now
         self.status = .completed
     }
     
@@ -80,6 +92,7 @@ public struct Order: Identifiable, Equatable {
             completion(self.status)
         case .preparing:
             // Next step is to complete the order.
+            self.completedAt = .now
             self.status = .completed
             completion(self.status)
         default: //

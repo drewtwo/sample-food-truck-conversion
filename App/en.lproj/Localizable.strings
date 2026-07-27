@@ -335,6 +335,24 @@ A localization file.
 /* A label indicating the order status. */
 "Status" = "Status";
 
+/* Completion time analytics section title. */
+"Completion Time Analytics" = "Completion Time Analytics";
+
+/* Label for the average completion time stat. */
+"Average" = "Average";
+
+/* Label for the median completion time stat. */
+"Median" = "Median";
+
+/* Label for the fastest (minimum) completion time stat. */
+"Fastest" = "Fastest";
+
+/* Label for the slowest (maximum) completion time stat. */
+"Slowest" = "Slowest";
+
+/* Label shown in the order detail view for the time taken to complete an order. */
+"Completion Time" = "Completion Time";
+
 /* Button title. */
 "Subscribe" = "Subscribe";
 
