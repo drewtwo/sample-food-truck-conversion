@@ -1,5 +1,5 @@
 /*
-See the LICENSE.txt file for this sample’s licensing information.
+See the LICENSE.txt file for this sample's licensing information.
 
 Abstract:
 The order detail view.
@@ -31,6 +31,15 @@ struct OrderDetailView: View {
                     Spacer()
                     Text(order.formattedDate)
                         .foregroundColor(.secondary)
+                }
+
+                if let minutes = order.completionDurationInMinutes {
+                    HStack {
+                        Text("Completion Time")
+                        Spacer()
+                        Label(formattedMinutes(minutes), systemImage: "clock.badge.checkmark")
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
             
@@ -80,6 +89,20 @@ struct OrderDetailView: View {
                 .labelStyle(.iconOnly)
                 .disabled(order.isComplete)
             }
+        }
+    }
+
+    // MARK: - Helpers
+
+    private func formattedMinutes(_ minutes: Double) -> String {
+        if minutes < 1 {
+            let seconds = Int(minutes * 60)
+            return "\(seconds)s"
+        } else if minutes < 60 {
+            return String(format: "%.1f min", minutes)
+        } else {
+            let hours = minutes / 60
+            return String(format: "%.1f hr", hours)
         }
     }
     
