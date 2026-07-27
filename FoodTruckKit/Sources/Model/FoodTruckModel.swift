@@ -190,6 +190,23 @@ public class FoodTruckModel: ObservableObject {
     public var incompleteOrders: [Order] {
         orders.filter { $0.status != .completed }
     }
+
+    // MARK: - Order Completion Time Analytics
+
+    /// Returns analytics computed over all orders.
+    public var orderAnalytics: OrderAnalytics {
+        OrderAnalytics(orders: orders)
+    }
+
+    /// Returns analytics computed over only the completed orders.
+    public var completedOrderAnalytics: OrderAnalytics {
+        OrderAnalytics(orders: orders.filter { $0.isComplete })
+    }
+
+    /// Returns analytics computed over orders matching the given predicate.
+    public func orderAnalytics(where predicate: (Order) -> Bool) -> OrderAnalytics {
+        OrderAnalytics(orders: orders.filter(predicate))
+    }
 }
 
 public enum DonutSortOrder: Hashable {
